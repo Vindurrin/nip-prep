@@ -20,6 +20,25 @@ export type Question = {
   moduleId: StudyModule["id"];
 };
 
+export type Flashcard = {
+  id: string;
+  moduleId: StudyModule["id"];
+  front: string;
+  back: string;
+  cue?: string;
+};
+
+export type FlashcardRating = "again" | "good";
+export type FlashcardProgress = Record<string, FlashcardRating>;
+
+export type InterviewAnswer = {
+  id: string;
+  moduleId: StudyModule["id"];
+  question: string;
+  answer: string;
+  followUp: string;
+};
+
 export type ScenarioStep = {
   title: string;
   evidence: string;
